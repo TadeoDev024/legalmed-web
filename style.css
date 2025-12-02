@@ -66,8 +66,81 @@ input, textarea { width: 100%; padding: 14px; border: 1px solid #cbd5e1; border-
 input:focus, textarea:focus { border-color: var(--accent); outline: none; }
 
 /* Footer */
-footer { background: var(--primary); color: rgba(255,255,255,0.7); padding: 40px 0; text-align: center; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.1); }
+footer {
+  background: var(--primary); /* Azul Oscuro */
+  color: rgba(255,255,255,0.8);
+  padding: 60px 0 20px;
+  border-top: 4px solid var(--accent); /* Línea Cian arriba para decorar */
+}
 
+/* Contenedor principal */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea todo a la IZQUIERDA */
+  text-align: left;        /* Texto a la izquierda */
+}
+
+.footer-logo {
+  font-family: 'Times New Roman', serif;
+  font-size: 2.2rem;
+  color: white;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
+/* Información de contacto */
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.footer-info p {
+  display: flex;
+  align-items: flex-start; /* Icono arriba alineado con la primera línea de texto */
+  gap: 15px;
+  margin: 0;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Estilo de los Íconos SVG */
+.footer-info svg {
+  color: var(--accent); /* Color Cian */
+  min-width: 20px;      /* Para que no se achiquen */
+  margin-top: 3px;      /* Ajuste fino para alinear con texto */
+}
+
+/* Enlaces (Tel y Mail) */
+.footer-info a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-info a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Copyright abajo del todo */
+.footer-copyright {
+  width: 100%;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  text-align: left; /* También a la izquierda */
+}
+
+/* Responsive: En celular sigue a la izquierda pero con margen */
+@media(max-width: 768px) {
+  footer { padding: 40px 0 20px; }
+  .footer-logo { font-size: 1.8rem; }
+}
 /* Responsive */
 @media(max-width: 768px) {
   .hero h1 { font-size: 2.5rem; }
