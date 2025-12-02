@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LegalMed - Abogados en Salud Tucumán</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Legal<span>Med</span></div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Especialidades</a></li>
+        <li><a href="#nosotros">El Estudio</a></li>
+        <li><a href="#contacto" class="btn-nav">Consulta Sin Cargo</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header id="inicio" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>Problemas con tu Obra Social <br>o Prepaga?</h1>
+      <p>Somos especialistas en Derecho a la Salud. Exigimos el cumplimiento de las prestaciones que te corresponden como Afiliado.</p>
+      <div class="hero-btns">
+        <a href="#contacto" class="btn btn-primary">Asesorarme Ahora</a>
+        <a href="#servicios" class="btn btn-outline">Ver Coberturas</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="servicios" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Áreas de Práctica</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.5l6.5 11.5h-13L12 5.5zM6 16a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm12 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>
+          </div>
+          <h3>Amparos de Salud</h3>
+          <p>Acciones judiciales rápidas para garantizar coberturas médicas rechazadas injustamente.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14h-2v-4H6v-2h4V7h2v4h4v2h-4v4z"/></svg>
+          </div>
+          <h3>Medicamentos</h3>
+          <p>Cobertura al 100% en medicación oncológica, diabetes y enfermedades crónicas.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"/></svg>
+          </div>
+          <h3>Discapacidad</h3>
+          <p>Defensa integral. Certificado Único de Discapacidad (CUD), prestaciones y transporte.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotros" class="section bg-light">
+    <div class="container about-container">
+      <div class="about-text">
+        <h2>Defendemos tu Salud</h2>
+        <p class="lead"><strong>Somos un Estudio Jurídico especializado en Derecho a la Salud.</strong></p>
+        <p>Si tenés algún problema con tu Obra Social o Prepaga, te asesoramos y defendemos legalmente para garantizar tu acceso a la salud.</p>
+        <ul class="check-list">
+          <li> Atención inmediata en casos urgentes.</li>
+          <li> Honorarios transparentes.</li>
+          <li> Ubicación céntrica: Lamadrid 318.</li>
+        </ul>
+      </div>
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80" alt="Reunión LegalMed">
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="section contact-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contacto Directo</h2>
+        <p>Déjenos su mensaje. Un abogado analizará su caso hoy mismo.</p>
+      </div>
+      <div class="contact-wrapper">
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <input type="text" id="nombre" placeholder="Nombre Completo" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" id="contacto" placeholder="Teléfono / Email" required>
+          </div>
+          <div class="form-group">
+            <textarea id="mensaje" rows="4" placeholder="¿Qué problema tiene con su Obra Social?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            <span style="font-size:1.1rem; vertical-align:middle; margin-right:5px;">📱</span> Enviar a WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2025 LegalMed. Lamadrid 318, Piso 8 Of. A - San Miguel de Tucumán</p>
+    </div>
+  </footer>
+
+  <button id="chat-toggle-btn" onclick="toggleChat()" title="Chat con Abogado"></button>
+
+  <div id="chat-widget" class="chat-widget-container">
+    <div class="chat-header">
+      <div style="display:flex; align-items:center; gap:10px;">
+          <div class="avatar-small"></div>
+          <div class="chat-header-info">
+              <h4>Soporte LegalMed</h4>
+              <span>En línea ahora</span>
+          </div>
+      </div>
+    </div>
+
+    <div class="chat-messages" id="chatWindow">
+      <div class="message bot">
+        <strong>Bienvenido a LegalMed.</strong><br><br>
+        Te defendemos ante incumplimientos de tu Obra Social o Prepaga.<br><br>
+        <em>¿Cuál es tu consulta hoy?</em>
+      </div>
+    </div>
+
+    <form class="chat-input-area" id="chatFormWidget">
+      <input type="text" id="userMsgWidget" placeholder="Escriba su consulta..." autocomplete="off">
+      <button type="submit">➤</button>
+    </form>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="chatbot.js"></script>
+
+</body>
+</html>

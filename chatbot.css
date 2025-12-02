@@ -1,0 +1,98 @@
+/* --- chatbot.css --- */
+
+/* 1. Botón Flotante con FOTO (Estilo Sosa) */
+#chat-toggle-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 9999;
+  border: 3px solid white;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.27);
+  
+  /* --- REEMPLAZA ESTA URL POR LA FOTO REAL DEL ABOGADO --- */
+  background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+#chat-toggle-btn:hover { transform: scale(1.1); }
+
+/* Puntito Verde "En Línea" */
+#chat-toggle-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  right: 5px;
+  width: 16px;
+  height: 16px;
+  background-color: #22c55e; /* Verde Online */
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+/* 2. Ventana del Chat */
+.chat-widget-container {
+  position: fixed;
+  bottom: 110px; /* Un poco más arriba */
+  right: 25px;
+  width: 350px;
+  height: 500px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.2);
+  display: none;
+  flex-direction: column;
+  z-index: 9999;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  border: 1px solid #e2e8f0;
+  animation: slideUp 0.3s ease-out;
+}
+
+.chat-widget-container.active { display: flex; }
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cabecera */
+.chat-header {
+  background: #0f172a;
+  padding: 15px 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Foto pequeña en cabecera */
+.avatar-small {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80'); /* MISMA FOTO */
+  background-size: cover;
+  background-position: center;
+  border: 2px solid white;
+}
+
+.chat-header-info h4 { margin: 0; font-size: 1rem; }
+.chat-header-info span { font-size: 0.75rem; color: #22c55e; } /* Texto verde */
+
+/* Mensajes */
+.chat-messages { flex: 1; padding: 20px; overflow-y: auto; background-color: #f8fafc; display: flex; flex-direction: column; gap: 12px; }
+.message { padding: 12px 16px; border-radius: 12px; font-size: 0.95rem; max-width: 85%; line-height: 1.5; }
+.message.bot { background: #ffffff; color: #334155; align-self: flex-start; border: 1px solid #e2e8f0; border-bottom-left-radius: 2px; }
+.message.user { background: #00b4d8; color: white; align-self: flex-end; border-bottom-right-radius: 2px; }
+
+/* Input */
+.chat-input-area { padding: 15px; background: white; border-top: 1px solid #f1f5f9; display: flex; gap: 10px; }
+.chat-input-area input { flex: 1; padding: 10px 15px; border: 1px solid #cbd5e1; border-radius: 25px; outline: none; background: #f8fafc; }
+.chat-input-area input:focus { border-color: #00b4d8; background: white; }
+.chat-input-area button { background: #00b4d8; color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.chat-input-area button:hover { background: #0096c7; }
